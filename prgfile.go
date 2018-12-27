@@ -78,11 +78,11 @@ type Reader struct {
 // unsigned value, and advances the offset.
 func (r *Reader) word() (uint16, error) {
 	var word [2]byte
-	_, err := io.ReadFull(r.buf, word[:])
+	nr, err := io.ReadFull(r.buf, word[:])
+	r.pos += nr
 	if err != nil {
 		return 0, err
 	}
-	r.pos += 2
 	return (uint16(word[1]) << 8) | uint16(word[0]), nil
 }
 

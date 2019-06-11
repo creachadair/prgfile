@@ -1,3 +1,3 @@
-module bitbucket.org/creachadair/prgfile
+module github.com/creachadair/prgfile
 
 go 1.12

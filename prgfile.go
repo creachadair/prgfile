@@ -3,18 +3,18 @@
 // Package prgfile reads programs from Commodore BASIC tokenized (PRG) files.
 //
 // Usage:
-//    pr, err := prgfile.New(r)
-//    ...
-//    for {
-//       line, err := pr.Line()
-//       if err == io.EOF {
-//          break
-//       } else if err != nil {
-//          log.Fatal("Failed: %v", err)
-//       }
-//       doSomethingWith(line)
-//    }
 //
+//	pr, err := prgfile.New(r)
+//	...
+//	for {
+//	   line, err := pr.Line()
+//	   if err == io.EOF {
+//	      break
+//	   } else if err != nil {
+//	      log.Fatal("Failed: %v", err)
+//	   }
+//	   doSomethingWith(line)
+//	}
 package prgfile
 
 import (

@@ -96,7 +96,7 @@ func (r *Reader) byte() (byte, error) {
 }
 
 // fail decorates an error message with location information.
-func (r *Reader) fail(msg string, args ...interface{}) error {
+func (r *Reader) fail(msg string, args ...any) error {
 	return fmt.Errorf("offset %d: %s", r.pos, fmt.Sprintf(msg, args...))
 }
 
